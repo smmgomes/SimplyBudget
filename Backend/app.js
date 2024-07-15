@@ -14,7 +14,7 @@ app.get("/", (_, res) => {
 const port = 3000;
 
 app.listen(port, () => {
-    console.log(`Jude mean${port}`);
+    console.log(`I LOVE SARA ${port}`);
     mongoose
         .connect(process.env.DB_URI)
         .then(() => {
