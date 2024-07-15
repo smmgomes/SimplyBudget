@@ -7,20 +7,21 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (_, res) => {
-    res.send("Hello World");
-});
+mongoose
+	.connect(process.env.DB_URI)
+	.then(() => {
+		console.log("Connected to the database");
+	})
+	.catch((err) => {
+		console.log(err.message);
+	});
 
 const port = 3000;
 
+app.get("/", (_, res) => {
+	res.send({ status: "ok", message: "Hello World!" });
+});
+
 app.listen(port, () => {
-    console.log(`I LOVE SARA ${port}`);
-    mongoose
-        .connect(process.env.DB_URI)
-        .then(() => {
-            console.log("Connected to MongoDB");
-        })
-        .catch((err) => {
-            console.log("Error: ", err.message);
-        });
+	console.log(`I LOVE SARA ${port}`);
 });
