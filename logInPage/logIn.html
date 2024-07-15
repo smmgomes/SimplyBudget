@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SimplyBudget</title>
+    <link rel="stylesheet" href="./logIn.css" />
+  </head>
+  <body>
+    <header class="headerOne">
+      <div class="spendWisely">Spend wisely &#58;&#41;</div>
+    </header>
+
+    <img
+      src="../images/sb_logo.PNG"
+      alt="image with S and B logo put together"
+      style="
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 13vh;
+        margin-bottom: 9vh;
+      "
+    />
+
+    <div class="animatedText">
+      <h2>
+        Welcome to Simply Budget! Here you will be able to keep track of your
+        expenses. Please sign in or register to get started.      
+      </h2>
+    </div>
+
+    <form
+    action=""
+      style="
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(220, 220, 220);
+        border: 1px solid rgb(184, 184, 184);
+        width: 290px;
+        padding-bottom: 6vh;
+        padding-left: 4vh;
+        padding-right: 4vh;
+        row-gap: 1.3rem;
+        border-radius: 18px;
+      "
+      method="post"
+    >
+
+      <img src="../images/for-login.svg" alt="money bag image" style="font-size: 5px; width: 3.5vw; padding-top: 2vh;">
+      <input
+        required
+        type="email"
+        placeholder="Enter your email"
+        style="height: 5vh; border-radius: 5px; border: 1px solid grey; padding: 10px;"
+      />
+      <input
+      required
+        style="height: 5vh; border-radius: 5px; border: 1px solid grey; padding: 10px;"
+        type="password"
+        pattern="[a-zA-Z0-9!@#]{8,}"
+        placeholder="Enter password"
+      />
+      <button type="submit" style="cursor: pointer;">Submit</button>
+      <a class="signinbox" href="./register.html">Register if you are new</a>
+    </form>
+    <footer>
+      <div></div>
+    </footer>
+  </body>
+</html>

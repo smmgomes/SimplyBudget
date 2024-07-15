@@ -1,0 +1,108 @@
+@font-face{
+    font-family: lemon_milk;
+    src: url(./lemon_milk/lemon-milk-pro-ftr-regular.otf)
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: lemon_milk; 
+}
+
+
+body{
+    margin: 0 auto; 
+    padding: 0;
+}
+
+.mainTitle{
+    font-family: lemon_milk;
+    text-align: center;
+    font-size: 9rem;
+}
+
+.spendWisely{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: lemon_milk;
+    font-size: 1.4vw;
+    background-color: black;
+    color: white;
+    height: 3vh;
+
+}
+
+.theLogo{
+    width: 11vh;
+    height: 10vh;
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding-left: 0;
+    
+}
+
+.navBar li{
+    flex:1; 
+    
+    
+}
+
+.navBar a{
+    text-decoration: none;
+    color: black;
+    font-family: lemon_milk;
+    font-size: 2.8vw;
+    
+}
+
+footer{
+    display: flex;
+    background-color: black;
+    height: 3vh;
+    margin-top: 11vh;
+    /* bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed; */
+}
+
+.dateTitle{
+    font-size: 1.5rem; 
+    text-decoration: none; 
+    color: black; 
+    margin: 0; 
+    margin-left: 25px;
+
+}
+
+.dateTitle:hover{
+    text-decoration: underline;
+    /* why wont it work!! */
+
+}
+
+
+.deleteButton{
+    cursor: pointer;
+    /* border: 1px solid black; */
+    margin: 0;
+    margin-right: 15px;
+    opacity: 40%;
+
+}
+
+.deleteButton:hover{
+    opacity: 100%;
+    
+}
+
+
+
