@@ -14,7 +14,7 @@ app.get("/", (_, res) => {
 const port = 3000;
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Jude mean${port}`);
     mongoose
         .connect(process.env.DB_URI)
         .then(() => {
