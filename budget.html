@@ -37,7 +37,7 @@
           <label for="income">
             Enter expected income:
             <input
-            style="width: 20vw; display: block;"
+              style="width: 20vw; display: block"
               type="number"
               id="income"
               min="0"
@@ -48,15 +48,36 @@
           </label>
           <label for="duration">
             Enter duration (from/to):
-            <div style="display: flex; flex-direction: row; column-gap: 20px; width: 20vw;">
-              <input type="date" id="duration" style="width: 11.8vw;" required min="2000-01-01" max="2050-01-01"/>
-              <input style="width: 11.8vw;" type="date" id="duration" required min="2000-01-01" max="2050-01-01" />
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                column-gap: 20px;
+                width: 20vw;
+              "
+            >
+              <input
+                type="date"
+                id="duration"
+                style="width: 11.8vw"
+                required
+                min="2000-01-01"
+                max="2050-01-01"
+              />
+              <input
+                style="width: 11.8vw"
+                type="date"
+                id="duration"
+                required
+                min="2000-01-01"
+                max="2050-01-01"
+              />
             </div>
           </label>
           <label for="budget">
             Enter budget:
             <input
-            style="width: 20vw; display: block;"
+              style="width: 20vw; display: block"
               step=".01"
               type="number"
               id="budget"
