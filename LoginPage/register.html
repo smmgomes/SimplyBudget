@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SimplyBudget</title>
+    <link rel="stylesheet" href="./register.css" />
+    <link rel="stylesheet" href="../globals.css" />
+  </head>
+  <body>
+    <header class="headerOne">
+      <div class="spendWisely">Spend wisely &#58;&#41;</div>
+    </header>
+    <img
+      src="../images/sb_logo.PNG"
+      alt="image with S and B logo put together"
+      style="
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 13vh;
+        margin-bottom: 9vh;
+      "
+    />
+    <div class="animatedText">
+      <h2>
+        Welcome to Simply Budget! Here you will be able to keep track of your
+        expenses. Please sign in or register to get started.
+      </h2>
+    </div>
+
+    <form
+      action=""
+      method="post"
+      style="
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(220, 220, 220);
+        border: 1px solid rgb(184, 184, 184);
+        width: 320px;
+        padding-bottom: 6vh;
+        padding-left: 4vh;
+        padding-right: 4vh;
+        row-gap: 1.3rem;
+        border-radius: 18px;
+      "
+    >
+      <img
+        src="../images/for-register.svg"
+        alt="money tree sign"
+        style="font-size: 5px; width: 4vw; padding-top: 2vh"
+      />
+      <input
+        id="email"
+        type="email"
+        required
+        style="
+          height: 5vh;
+          width: 220px;
+          border: 1px solid grey;
+          border-radius: 5px;
+          text-align: center;
+        "
+        placeholder="Enter your email"
+      />
+      <div style="display: flex; flex-direction: row; column-gap: 20px">
+        <input
+          id="firstname"
+          type="text"
+          required
+          style="
+            width: 100px;
+            height: 5vh;
+            border: 1px solid grey;
+            border-radius: 5px;
+            text-align: center;
+          "
+          placeholder="First name"
+        />
+        <input
+          id="lastname"
+          type="text"
+          required
+          style="
+            width: 100px;
+            height: 5vh;
+            border: 1px solid grey;
+            border-radius: 5px;
+            text-align: center;
+          "
+          placeholder="Last name"
+        />
+      </div>
+      <input
+        id="password"
+        type="password"
+        required
+        style="
+          height: 5vh;
+          width: 220px;
+          border: 1px solid grey;
+          border-radius: 5px;
+          text-align: center;
+        "
+        placeholder="Enter password"
+      />
+      <button id="submit" type="submit" style="cursor: pointer">Submit</button>
+      <a href="./logIn.html" class="signinbox">Sign in instead</a>
+    </form>
+    <footer>
+      <div></div>
+    </footer>
+    <script src="register.js"></script>
+  </body>
+</html>

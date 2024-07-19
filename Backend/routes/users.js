@@ -9,8 +9,8 @@ router.get("/allUsers", async (_, res) => {
         const users = User.find({});
         return res.status(200).send({
             status: "ok",
-            message: "User retrieved",
-            users: users,
+            message: "Users retrieved",
+            users: users[0],
         });
     } catch (err) {
         console.log(err.message);

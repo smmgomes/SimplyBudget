@@ -9,11 +9,12 @@ router.post("/", async (req, res) => {
     try {
         const { name, email, password } = req.body;
         const oldUser = User.findOne({ email: email });
-        if (oldUser)
+        if (oldUser) {
             return res.status(409).send({
                 status: "error",
                 message: "User with this email already exists",
             });
+        }
         const hashedPassword = bcrypt.hash(password, 10);
         await User.create({
             name: name,

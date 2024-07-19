@@ -1,0 +1,48 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.spendWisely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: black;
+  color: white;
+  height: 3vh;
+}
+
+.animatedText {
+  background-color: rgb(220, 220, 220);
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 11vh;
+  overflow: hidden;
+}
+
+.animatedText h2 {
+  animation: linear infinite 11s;
+  animation-name: textAnimation;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.signinbox {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: grey;
+  cursor: pointer;
+}
+
+.signinbox:hover {
+  text-decoration: underline;
+  color: black;
+}
