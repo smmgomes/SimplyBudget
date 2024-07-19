@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+}
+
+.logTitle {
+  text-align: center;
+  font-family: lemon_milk;
+  font-size: 1.5rem;
+  font-weight: 100;
+  background-color: rgb(220, 220, 220);
+}
+
+.spendWisely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: lemon_milk;
+  font-size: 1.4vw;
+  background-color: black;
+  color: white;
+  height: 3vh;
+}
+
+.mainStuff {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr;
+  font-family: lemon_milk;
+  font-size: 1.5rem;
+  row-gap: 2rem;
+}
+
+.bslContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(220, 220, 220);
+  width: 100%;
+  border-radius: 6px;
+}
+
+.bsl {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 1.7vw;
+}
+
+.wholeStuff {
+  padding-top: 15vh;
+}
+
+.forInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.inputss {
+  padding-top: 15vh;
+  width: 40%;
+}
+
+#spent,
+#gotback {
+  width: 12vw;
+  height: 6.5vh;
+  font-family: lemon_milk;
+  font-size: 1.2vw;
+  text-align: center;
+}

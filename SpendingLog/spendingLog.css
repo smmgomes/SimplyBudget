@@ -1,0 +1,44 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.mainTitle {
+  font-family: lemon_milk;
+  text-align: center;
+  font-size: 9rem;
+}
+
+.spendWisely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: lemon_milk;
+  font-size: 1.4vw;
+  background-color: black;
+  color: white;
+  height: 3vh;
+}
+
+.dateTitle {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.dateTitle:hover {
+  text-decoration: underline;
+}
+
+.deleteButton {
+  cursor: pointer;
+  margin: 0;
+  margin-right: 15px;
+  opacity: 40%;
+}
+
+.deleteButton:hover {
+  opacity: 100%;
+}

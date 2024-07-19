@@ -1,0 +1,118 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+}
+
+.mainTitle {
+  font-family: lemon_milk;
+  text-align: center;
+  font-size: 9.5vw;
+  padding-top: 6vh;
+}
+
+.spendWisely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: lemon_milk;
+  font-size: 1.4vw;
+  background-color: black;
+  color: white;
+  height: 3vh;
+}
+
+#duration {
+  color: grey;
+  font-size: 0.95vw;
+}
+
+.submits {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 40vw;
+  margin-top: 1.1vh;
+  margin-bottom: -3.5vh;
+  border: 3px solid black;
+  border-radius: 41px;
+}
+
+.submits * {
+  font-size: 1.4em;
+}
+
+label {
+  display: block;
+  z-index: 5;
+}
+
+input {
+  height: 4.5vh;
+  width: 100%;
+  font-family: lemon_milk;
+  font-size: 18px;
+}
+
+.submitButton {
+  font-size: 1.7vw;
+  background-color: white;
+  cursor: pointer;
+  height: 6vh;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 3px black;
+}
+
+.submitForm button {
+  margin: 0;
+  margin-left: 1.3vw;
+  margin-right: 1.3vw;
+}
+
+.submitContainer {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  width: 10%;
+}
+
+.logout {
+  text-decoration: none;
+  color: grey;
+  display: block;
+  text-align: center;
+  margin-top: 1.5vh;
+}
+
+.logout:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* change all the font-size units to vw 
+
+
+
+I also might need to make the whokle submit area flex
+
+
+
+Also, in individualSavingLog, put the submit buttons
+
+
+also, expected income can change
+
+once duration ends, maybe a pop up can appear
+
+
+
+
+*/

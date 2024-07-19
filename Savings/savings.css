@@ -1,0 +1,57 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.savingsTitle {
+  text-align: center;
+  font-family: lemon_milk;
+  font-size: 4.5vw;
+  font-weight: 100;
+  padding-top: 15vh;
+}
+
+.spendWisely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: lemon_milk;
+  font-size: 1.4vw;
+  background-color: black;
+  color: white;
+  height: 3vh;
+}
+
+.amount {
+  text-align: center;
+  font-family: lemon_milk;
+  font-weight: 100;
+  font-size: 3.4vw;
+  padding-top: 15vh;
+}
+
+.text {
+  text-align: center;
+  font-family: lemon_milk;
+  font-weight: 100;
+  padding-top: 16vh;
+  font-size: 1.5rem;
+}
+
+#savings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#savings h2 {
+  font-size: 30px;
+}
+
+#savings canvas {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}

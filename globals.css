@@ -1,0 +1,17 @@
+@font-face {
+  font-family: lemon_milk;
+  src: url(../lemon_milk/lemon-milk-pro-ftr-regular.otf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: lemon_milk;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  height: 3vh;
+  margin-top: 11vh;
+}

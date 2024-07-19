@@ -1,0 +1,24 @@
+.theLogo {
+  width: 11vh;
+  height: 10vh;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding-left: 0;
+}
+
+.navBar li {
+  flex: 1;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: black;
+  font-family: lemon_milk;
+  font-size: 2.8vw;
+}

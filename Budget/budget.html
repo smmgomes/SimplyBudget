@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SimplyBudget</title>
+    <link rel="stylesheet" href="budget.css" />
+    <link rel="stylesheet" href="../Components/navbar.css" />
+    <link rel="stylesheet" href="../globals.css" />
+    <script src="../Components/navbar.js" defer></script>
+  </head>
+  <body>
+    <header class="headerOne">
+      <div class="spendWisely">Spend wisely &#58;&#41;</div>
+    </header>
+    <header id="navbar-container"></header>
+    <h1 class="mainTitle">Simply Budget</h1>
+    <p
+      id="name"
+      style="text-align: center; margin-top: 11vh; font-size: 1.1rem"
+    >
+      Hello *FirstName*!
+    </p>
+    <form action="" method="post" class="submitForm">
+      <fieldset class="submits">
+        <label for="income"> Enter expected income: </label>
+        <input
+          style="width: 10vw"
+          type="number"
+          id="income"
+          min="0"
+          max="10000"
+          step=".01"
+          required
+        />
+        <div style="width: 16em">
+          Enter duration (from/to):
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              width: 13em;
+              gap: 10px;
+            "
+          >
+            <input
+              type="date"
+              id="duration"
+              style="font-size: 0.5em"
+              required
+              min="2000-01-01"
+              max="2050-01-01"
+            />
+            <input
+              type="date"
+              id="duration"
+              style="font-size: 0.5em"
+              required
+              min="2000-01-01"
+              max="2050-01-01"
+            />
+          </div>
+        </div>
+        <label for="budget"> Enter budget: </label>
+        <input
+          style="width: 16em; display: block"
+          step=".01"
+          type="number"
+          id="budget"
+          min="0"
+          max="10000"
+          required
+        />
+      </fieldset>
+      <div class="submitContainer">
+        <button class="submitButton">Submit</button>
+      </div>
+    </form>
+    <a href="../LoginPage/logIn.html" class="logout">Log out</a>
+    <footer></footer>
+  </body>
+</html>
