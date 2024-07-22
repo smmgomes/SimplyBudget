@@ -1,42 +1,36 @@
-const signUp = () => {
-  const email = document.getElementById("email").value;
+document.getElementById("submit").addEventListener("click", async () => {
   const firstname = document.getElementById("firstname").value;
   const lastname = document.getElementById("lastname").value;
+  const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  console.log(firstname, lastname, email, password);
 
-  fetch("localhost:3000/users/allUsers", {
-    method: "GET",
+  await fetch("http://localhost:3000/signup", {
+    method: "POST",
+    body: JSON.stringify({
+      email: email,
+      password: password,
+      firstname: firstname,
+      lastname: lastname,
+    }),
     headers: {
-      "Content-Type": "application/json; charset=UTF-8",
+      "Content-Type": "application/json",
     },
   })
     .then((res) => {
-      console.log(res.body);
+      if (!res.ok) {
+        return res
+          .json()
+          .then((err) => alert(err.message || "Email already exists"));
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log("User created", data);
+      // location.href = "./logIn.html";
     })
     .catch((err) => {
-      console.log(err.message);
+      console.error("Fetch error:", err);
+      alert("An error occurred. Please try again.");
     });
-
-  //   fetch("https://localhost:3000/signup", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       email,
-  //       password,
-  //       firstname,
-  //       lastname,
-  //     }),
-  //     headers: {
-  //       "Content-Type": "application/json; charset=UTF-8",
-  //     },
-  //   })
-  //     .then((res) => {
-  //       res.json();
-  //       location.href = "./logIn.html";
-  //       console.log("User created");
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-};
-
-document.getElementById("submit").addEventListener("click", signUp);
+});
