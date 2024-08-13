@@ -52,6 +52,7 @@
       />
       <input
         required
+        id="email"
         type="email"
         placeholder="Enter your email"
         style="
@@ -63,6 +64,7 @@
       />
       <input
         required
+        id="password"
         style="
           height: 5vh;
           border-radius: 5px;
@@ -73,11 +75,13 @@
         pattern="[a-zA-Z0-9!@#]{8,}"
         placeholder="Enter password"
       />
-      <button type="submit" style="cursor: pointer">Submit</button>
+      <button id="submit" type="submit" style="cursor: pointer">Submit</button>
       <a class="signinbox" href="register.html">Register if you are new</a>
     </form>
     <footer>
       <div></div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

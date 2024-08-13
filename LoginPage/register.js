@@ -1,14 +1,12 @@
-const urls = require("../Backend/urls");
 document.getElementById("submit").addEventListener("click", async () => {
   event.preventDefault();
   const firstname = document.getElementById("firstname").value;
   const lastname = document.getElementById("lastname").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  console.log(firstname, lastname, email, password);
 
   await axios
-    .post(`${urls.usersUri}`, {
+    .post(`http://localhost:3000/signup`, {
       email: email,
       password: password,
       firstname: firstname,
@@ -18,6 +16,6 @@ document.getElementById("submit").addEventListener("click", async () => {
       console.log(res.data);
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.message);
     });
 });
