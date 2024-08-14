@@ -22,7 +22,7 @@ body {
   height: 3vh;
 }
 
-#duration {
+.duration {
   color: grey;
   font-size: 0.95vw;
 }

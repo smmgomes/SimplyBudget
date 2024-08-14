@@ -169,7 +169,7 @@ app.post(`/login`, async (req, res) => {
 app.get(`/allusers`, async (_, res) => await getAllData(User, "Users", res));
 
 app
-  .route(`user/:id`)
+  .route(`/user/:id`)
   .get(async (req, res) => await getData(req.params.id, User, "User", res))
   .put(
     async (req, res) => await updateData(req.params.id, User, "User", req, res)
@@ -213,3 +213,18 @@ app
     async (req, res) =>
       await deleteData(req.params.id, SpendingLog, "Spending log", res)
   );
+
+app.post("/budgetadd", async (req, res) => {});
+app
+  .route(`/budget/:id`)
+  .get(async (req, res) => {
+    const id = req.params.id;
+    if (!id) {
+      return res.status(400).json({
+        status: "error",
+        message: "User ID not found",
+      });
+    }
+  })
+  .put(async (req, res) => {})
+  .delete(async (req, res) => {});
