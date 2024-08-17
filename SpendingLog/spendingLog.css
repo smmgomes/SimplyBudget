@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
   padding: 0;
+  height: 100vh;
 }
 
 .mainTitle {
@@ -19,11 +20,19 @@ body {
   color: white;
   height: 3vh;
 }
+.subtitle {
+  font-size: 4.5vw;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
 
 .dateTitle {
-  font-size: 1.5rem;
+  font-size: 1.64vw;
   text-decoration: none;
   color: black;
+  align-self: center;
   margin: 0;
   margin-left: 25px;
 }
@@ -32,7 +41,18 @@ body {
   text-decoration: underline;
 }
 
+.log_list_item {
+  display: flex;
+  padding: 1vh;
+  width: 100%;
+  border-radius: 9px;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: rgb(220, 220, 220);
+}
+
 .deleteButton {
+  display: flex;
   cursor: pointer;
   margin: 0;
   margin-right: 15px;
@@ -41,4 +61,11 @@ body {
 
 .deleteButton:hover {
   opacity: 100%;
+}
+
+.log_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  width: 45%;
 }
