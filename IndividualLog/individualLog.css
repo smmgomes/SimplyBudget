@@ -86,9 +86,9 @@ body {
 }
 
 label[for="Spent"],
-label[for="gotBack"] {
+label[for="GotBack"] {
   font-size: 1.3em;
-  margin-top: 1.5vh;
+  margin-top: 1.65vh;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
