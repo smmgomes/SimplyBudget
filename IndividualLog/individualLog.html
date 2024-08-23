@@ -17,117 +17,46 @@
     <h1 id="title" class="logTitle" style="font-size: 1.5vw"></h1>
     <div class="wholeStuff">
       <div class="mainStuff">
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">
-            Budget:
-          </div>
-          <div
-            id="budget"
-            class="bsl"
-            style="padding-right: 2vw; margin-right: 0"
-          >
-            $
-          </div>
+        <div class="tableRow">
+          <span class="bsl bslLeft">Budget:</span>
+          <span id="budget" class="bsl bslRight">$</span>
         </div>
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">
-            Spent:
-          </div>
-          <div
-            id="spent_value"
-            class="bsl"
-            style="padding-right: 2vw; margin-right: 0"
-          >
-            $
-          </div>
+        <div class="tableRow">
+          <div class="bsl bslLeft">Spent:</div>
+          <div id="spent_value" class="bsl bslRight">$</div>
         </div>
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">Left:</div>
-          <div
-            id="left"
-            class="bsl"
-            style="padding-right: 2vw; margin-right: 0"
-          >
-            $
-          </div>
+        <div class="tableRow">
+          <div class="bsl bslLeft">Left:</div>
+          <div id="left" class="bsl bslRight">$</div>
         </div>
       </div>
     </div>
-    <div class="inputss">
-      <div class="forInputs">
-        <p style="font-size: 2vh">
-          <label
-            for="spent"
-            style="margin-left: 0; display: flex; flex-direction: column"
-            >Spent:</label
-          >
-        </p>
-        <label
-          for="spent"
-          style="margin-left: 0; display: flex; flex-direction: column"
-          ><input
-            style="
-              border-radius: 6px;
-              border: 1px solid grey;
-              padding-left: 6px;
-            "
-            type="number"
-            step=".01"
-            id="spent"
+    <div class="inputsContainer">
+      <div class="spentContainer">
+        <label for="Spent">Spent:</label>
+        <div style="display: flex; flex-direction: column">
+          <input
+            type="text"
+            id="Spent"
+            class="spentInput"
             placeholder="Type here"
           />
-          <button
-            type="submit"
-            style="
-              cursor: pointer;
-              margin-top: 10px;
-              border: 1px solid rgb(220, 220, 220);
-              box-shadow: inset 0px 0px 2px;
-              border-radius: 10px;
-              font-size: 0.9vw;
-            "
-          >
-            Done
-          </button></label
-        >
-        <p style="font-size: 2vh">
-          <label
-            for="gotback"
-            style="margin-right: 0; display: flex; flex-direction: column"
-            >Got back:</label
-          >
-        </p>
-        <label
-          for="gotback"
-          style="margin-right: 0; display: flex; flex-direction: column"
-          ><input
-            style="
-              border-radius: 6px;
-              border: 1px solid grey;
-              padding-left: 6px;
-            "
-            type="number"
-            step=".01"
-            id="gotback"
+          <button>Done</button>
+        </div>
+      </div>
+      <div class="gotBackContainer">
+        <label for="gotBack">Got Back:</label>
+        <div style="display: flex; flex-direction: column">
+          <input
+            type="text"
+            id="GotBack"
+            class="gotBackInput"
             placeholder="Type here"
           />
-          <button
-            type="submit"
-            style="
-              cursor: pointer;
-              margin-top: 10px;
-              border: 1px solid rgb(220, 220, 220);
-              box-shadow: inset 0px 0px 2px;
-              border-radius: 10px;
-              font-size: 0.9vw;
-            "
-          >
-            Done
-          </button></label
-        >
+          <button>Done</button>
+        </div>
       </div>
     </div>
-    <br />
     <footer id="footer"></footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="individualLog.js"></script>
