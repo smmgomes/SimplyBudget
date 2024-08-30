@@ -5,7 +5,6 @@ body {
 
 .savingsTitle {
   text-align: center;
-  font-family: lemon_milk;
   font-size: 4.5vw;
   font-weight: 100;
   padding-top: 15vh;
@@ -15,7 +14,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: lemon_milk;
   font-size: 1.4vw;
   background-color: black;
   color: white;
@@ -24,7 +22,6 @@ body {
 
 .amount {
   text-align: center;
-  font-family: lemon_milk;
   font-weight: 100;
   font-size: 3.4vw;
   padding-top: 15vh;
@@ -32,7 +29,6 @@ body {
 
 .text {
   text-align: center;
-  font-family: lemon_milk;
   font-weight: 100;
   padding-top: 16vh;
   font-size: 1.5rem;

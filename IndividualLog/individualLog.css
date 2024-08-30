@@ -4,7 +4,6 @@ body {
 
 .logTitle {
   text-align: center;
-  font-family: lemon_milk;
   font-size: 1.5rem;
   font-weight: 100;
   background-color: rgb(220, 220, 220);
@@ -14,7 +13,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: lemon_milk;
   font-size: 1.4vw;
   background-color: black;
   color: white;
@@ -25,14 +23,14 @@ body {
   display: grid;
   width: 40%;
   grid-template-columns: 1fr;
-  font-family: lemon_milk;
   font-size: 1.5rem;
   row-gap: 2rem;
 }
 
-.bslContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
   background-color: rgb(220, 220, 220);
   width: 100%;
   border-radius: 6px;
@@ -44,25 +42,60 @@ body {
   font-size: 1.7vw;
 }
 
+.bslLeft {
+  margin-left: 2vw;
+}
+.bslRight {
+  margin-right: 2vw;
+}
+
 .wholeStuff {
   padding-top: 15vh;
 }
 
-.forInputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.inputss {
-  padding-top: 15vh;
+.inputsContainer {
+  display: flex;
+  flex-direction: row;
   width: 40%;
+  margin-top: 15vh;
 }
 
-#spent,
-#gotback {
+.gotBackContainer,
+.spentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  text-align: center;
+}
+
+.spentInput,
+.gotBackInput {
+  border-radius: 6px;
+  border: 1px solid grey;
+  padding-left: 6px;
+  font-size: 2vh;
+  margin-bottom: 1vh;
+}
+
+#Spent,
+#GotBack {
   width: 12vw;
   height: 6.5vh;
-  font-family: lemon_milk;
-  font-size: 1.2vw;
+  font-size: 1.3em;
   text-align: center;
+}
+
+label[for="Spent"],
+label[for="GotBack"] {
+  font-size: 1.3em;
+  margin-top: 1.65vh;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

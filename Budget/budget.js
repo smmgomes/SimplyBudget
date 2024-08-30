@@ -1,38 +1,26 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const id = new URLSearchParams(window.location.search).get("id");
-    if (!id) {
-        console.log("User ID not found");
-        return;
-    }
-    await axios
-        .get(`http://localhost:3000/user/${id}`)
-        .then((res) => {
-            document.getElementById("name").textContent =
-                "Hello, " + res.data.data.firstname + "!";
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
-});
-
 document.getElementById("submit").addEventListener("click", async () => {
-    event.preventDefault();
-    let income = document.getElementById("income");
-    let duration_from = document.getElementById("duration_from");
-    let duration_to = document.getElementById("duration_to");
-    let budget = document.getElementById("budget");
-
-    await axios
-        .post(`http://localhost:3000/addlog`, {
-            income: income.value,
-            duration_from: duration_from.value,
-            duration_to: duration_to.value,
-            budget: budget.value,
-        })
-        .then((_) => {
-            console.log("Budget added");
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
+  event.preventDefault();
+  let income = Number(document.getElementById("income").value);
+  let duration_from = document.getElementById("duration_from").value;
+  let duration_to = document.getElementById("duration_to").value;
+  let budget = Number(document.getElementById("budget").value);
+  if (!income || !duration_from || !duration_to || !budget) {
+    alert("Please fill in all fields");
+    return;
+  }
+  await axios
+    .post(`http://localhost:3000/addlog`, {
+      income: income,
+      duration_from: duration_from,
+      duration_to: duration_to,
+      budget: budget,
+    })
+    .then((res) => {
+      console.log(res.data.message);
+      alert("Budget has been added for viewing in the Spending Log");
+    })
+    .catch((err) => {
+      console.log(err.response.data.message);
+      alert("This spending log already exists");
+    });
 });

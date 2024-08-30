@@ -1,139 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>SimplyBudget</title>
-    <link rel="stylesheet" href="./spendingLog.css" />
-    <link rel="stylesheet" href="../globals.css" />
-    <link rel="stylesheet" href="../Components/navbar.css" />
-    <script src="../Components/navbar.js" defer></script>
-  </head>
-  <body>
-    <header class="headerOne">
-      <div class="spendWisely">Spend wisely &#58;&#41;</div>
-    </header>
-    <header id="navbar-container"></header>
-    <h2
-      style="
-        font-size: 4.5vw;
-        font-weight: 100;
-        text-align: center;
-        padding-top: 15vh;
-        padding-bottom: 15vh;
-      "
-    >
-      All your expenses are here.
-    </h2>
-    <div
-      style="display: flex; flex-direction: column; row-gap: 5vh; width: 45%"
-    >
-      <div
-        style="
-          width: 100%;
-          border-radius: 9px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 7vh;
-          background-color: rgb(220, 220, 220);
-          justify-content: space-between;
-        "
-      >
-        <!-- diplay: flex; so that the items are beside one another -->
-        <!-- ive been seeing span a lot, what is span?  -->
-        <a
-          class="dateTitle"
-          href="../IndividualLog/individualLog.html"
-          style="font-size: 1.64vw"
-          >M Date, Year-M Date, Year</a
-        >
-        <!-- should the id for each one of them randomly generated?  -->
-
-        <img
-          class="deleteButton"
-          src="../images/cross-svgrepo-com.svg"
-          alt="delete button"
-          width="45px"
-          onclick="
-            
-            confirm('Are you sure you want to delete this log?');
-            
-            "
-        />
-        <!-- what unit should i use for the checkbox? -->
-      </div>
-      <div
-        style="
-          width: 100%;
-          border-radius: 9px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 7vh;
-          background-color: rgb(220, 220, 220);
-          justify-content: space-between;
-        "
-      >
-        <!-- diplay: flex; so that the items are beside one another -->
-        <!-- ive been seeing span a lot, what is span?  -->
-        <a
-          class="dateTitle"
-          href="../IndividualLog/individualLog.html"
-          style="font-size: 1.64vw"
-          >M Date, Year-M Date, Year</a
-        >
-        <!-- should the id for each one of them randomly generated?  -->
-
-        <img
-          class="deleteButton"
-          src="../images/cross-svgrepo-com.svg"
-          alt="delete button"
-          width="45px"
-          onclick="
-            
-            confirm('Are you sure you want to delete this log?');
-            
-            "
-        />
-        <!-- what unit should i use for the checkbox? -->
-      </div>
-      <div
-        style="
-          width: 100%;
-          border-radius: 9px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 7vh;
-          background-color: rgb(220, 220, 220);
-          justify-content: space-between;
-        "
-      >
-        <!-- diplay: flex; so that the items are beside one another -->
-        <!-- ive been seeing span a lot, what is span?  -->
-        <a
-          class="dateTitle"
-          href="../IndividualLog/individualLog.html"
-          style="font-size: 1.64vw"
-          >M Date, Year-M Date, Year</a
-        >
-        <!-- should the id for each one of them randomly generated?  -->
-
-        <img
-          class="deleteButton"
-          src="../images/cross-svgrepo-com.svg"
-          alt="delete button"
-          width="45px"
-          onclick="
-            confirm('Are you sure you want to delete this log?');
-            "
-        />
-        <!-- what unit should i use for the checkbox? -->
-      </div>
-    </div>
-
-    <footer>
-      <div></div>
-    </footer>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>SimplyBudget</title>
+        <link rel="stylesheet" href="./spendingLog.css" />
+        <link rel="stylesheet" href="../globals.css" />
+        <link rel="stylesheet" href="../Components/navbar.css" />
+        <script src="../Components/navbar.js" defer></script>
+    </head>
+    <body>
+        <header class="headerOne">
+            <div class="spendWisely">Spend wisely &#58;&#41;</div>
+        </header>
+        <header id="navbar-container"></header>
+        <h2 class="subtitle">All your expenses are here.</h2>
+        <div class="log_list" id="log_list"></div>
+        <footer id="footer"></footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="spendingLog.js"></script>
+    </body>
 </html>

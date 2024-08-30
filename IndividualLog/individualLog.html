@@ -1,114 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>SimplyBudget</title>
-    <link rel="stylesheet" href="individualLog.css" />
-    <link rel="stylesheet" href="../globals.css" />
-    <link rel="stylesheet" href="../Components/navbar.css" />
-    <script src="../Components/navbar.js" defer></script>
-  </head>
-  <body>
-    <header class="headerOne">
-      <div class="spendWisely">Spend wisely &#58;&#41;</div>
-    </header>
-    <header id="navbar-container"></header>
+    <head>
+        <meta charset="UTF-8" />
+        <title>SimplyBudget</title>
+        <link rel="stylesheet" href="individualLog.css" />
+        <link rel="stylesheet" href="../globals.css" />
+        <link rel="stylesheet" href="../Components/navbar.css" />
+        <script src="../Components/navbar.js" defer></script>
+    </head>
 
-    <h1 class="logTitle" style="font-size: 1.5vw">M Date, Year-M Date, Year</h1>
-
-    <div class="wholeStuff">
-      <div class="mainStuff">
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">
-            Budget:
-          </div>
-          <div class="bsl" style="padding-right: 2vw; margin-right: 0">
-            $ amount
-          </div>
+    <body>
+        <header class="headerOne">
+            <div class="spendWisely">Spend wisely :)</div>
+        </header>
+        <header id="navbar-container"></header>
+        <h1 id="title" class="logTitle" style="font-size: 1.5vw"></h1>
+        <div class="wholeStuff">
+            <div class="mainStuff">
+                <div class="tableRow">
+                    <span class="bsl bslLeft">Budget:</span>
+                    <span id="budget" class="bsl bslRight">$</span>
+                </div>
+                <div class="tableRow">
+                    <div class="bsl bslLeft">Spent:</div>
+                    <div id="spent_value" class="bsl bslRight">$</div>
+                </div>
+                <div class="tableRow">
+                    <div class="bsl bslLeft">Left:</div>
+                    <div id="left" class="bsl bslRight">$</div>
+                </div>
+            </div>
         </div>
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">
-            Spent:
-          </div>
-          <div class="bsl" style="padding-right: 2vw; margin-right: 0">
-            $ amount
-          </div>
+        <div class="inputsContainer">
+            <div class="spentContainer">
+                <label for="Spent">Spent:</label>
+                <div style="display: flex; flex-direction: column">
+                    <input
+                        type="text"
+                        id="SpentInput"
+                        class="spentInput"
+                        placeholder="Type here"
+                    />
+                    <button onclick="updateSpent()">Done</button>
+                </div>
+            </div>
+            <div class="gotBackContainer">
+                <label for="GotBack">Got Back:</label>
+                <div style="display: flex; flex-direction: column">
+                    <input
+                        type="text"
+                        id="GotBack"
+                        class="gotBackInput"
+                        placeholder="Type here"
+                    />
+                    <button onclick="updateGotBack()">Done</button>
+                </div>
+            </div>
         </div>
-        <div class="bslContainer">
-          <div class="bsl" style="padding-left: 2vw; margin-left: 0">Left:</div>
-          <div class="bsl" style="padding-right: 2vw; margin-right: 0">
-            $ amount
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="inputss">
-      <div class="forInputs">
-        <label
-          for="spent"
-          style="margin-left: 0; display: flex; flex-direction: column"
-        >
-          <p style="font-size: 2vh">Spent:</p>
-          <input
-            style="
-              border-radius: 6px;
-              border: 1px solid grey;
-              padding-left: 6px;
-            "
-            type="number"
-            step=".01"
-            id="spent"
-            placeholder="Type here"
-          />
-          <button
-            type="submit"
-            style="
-              cursor: pointer;
-              margin-top: 10px;
-              border: 1px solid rgb(220, 220, 220);
-              box-shadow: inset 0px 0px 2px;
-              border-radius: 10px;
-              font-size: 0.9vw;
-            "
-          >
-            Done
-          </button>
-        </label>
-
-        <label
-          for="gotback"
-          style="margin-right: 0; display: flex; flex-direction: column"
-        >
-          <p style="font-size: 2vh">Got back:</p>
-          <input
-            style="
-              border-radius: 6px;
-              border: 1px solid grey;
-              padding-left: 6px;
-            "
-            type="number"
-            step=".01"
-            id="gotback"
-            placeholder="Type here"
-          />
-          <button
-            type="submit"
-            style="
-              cursor: pointer;
-              margin-top: 10px;
-              border: 1px solid rgb(220, 220, 220);
-              box-shadow: inset 0px 0px 2px;
-              border-radius: 10px;
-              font-size: 0.9vw;
-            "
-          >
-            Done
-          </button>
-        </label>
-      </div>
-    </div>
-    <br />
-    <footer id="footer"></footer>
-  </body>
+        <footer id="footer"></footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="individualLog.js"></script>
+    </body>
 </html>
