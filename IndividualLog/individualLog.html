@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>SimplyBudget</title>
-    <link rel="stylesheet" href="individualLog.css" />
-    <link rel="stylesheet" href="../globals.css" />
-    <link rel="stylesheet" href="../Components/navbar.css" />
-    <script src="../Components/navbar.js" defer></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>SimplyBudget</title>
+        <link rel="stylesheet" href="individualLog.css" />
+        <link rel="stylesheet" href="../globals.css" />
+        <link rel="stylesheet" href="../Components/navbar.css" />
+        <script src="../Components/navbar.js" defer></script>
+    </head>
 
-  <body>
-    <header class="headerOne">
-      <div class="spendWisely">Spend wisely :)</div>
-    </header>
-    <header id="navbar-container"></header>
-    <h1 id="title" class="logTitle" style="font-size: 1.5vw"></h1>
-    <div class="wholeStuff">
-      <div class="mainStuff">
-        <div class="tableRow">
-          <span class="bsl bslLeft">Budget:</span>
-          <span id="budget" class="bsl bslRight">$</span>
+    <body>
+        <header class="headerOne">
+            <div class="spendWisely">Spend wisely :)</div>
+        </header>
+        <header id="navbar-container"></header>
+        <h1 id="title" class="logTitle" style="font-size: 1.5vw"></h1>
+        <div class="wholeStuff">
+            <div class="mainStuff">
+                <div class="tableRow">
+                    <span class="bsl bslLeft">Budget:</span>
+                    <span id="budget" class="bsl bslRight">$</span>
+                </div>
+                <div class="tableRow">
+                    <div class="bsl bslLeft">Spent:</div>
+                    <div id="spent_value" class="bsl bslRight">$</div>
+                </div>
+                <div class="tableRow">
+                    <div class="bsl bslLeft">Left:</div>
+                    <div id="left" class="bsl bslRight">$</div>
+                </div>
+            </div>
         </div>
-        <div class="tableRow">
-          <div class="bsl bslLeft">Spent:</div>
-          <div id="spent_value" class="bsl bslRight">$</div>
+        <div class="inputsContainer">
+            <div class="spentContainer">
+                <label for="Spent">Spent:</label>
+                <div style="display: flex; flex-direction: column">
+                    <input
+                        type="text"
+                        id="SpentInput"
+                        class="spentInput"
+                        placeholder="Type here"
+                    />
+                    <button onclick="updateSpent()">Done</button>
+                </div>
+            </div>
+            <div class="gotBackContainer">
+                <label for="GotBack">Got Back:</label>
+                <div style="display: flex; flex-direction: column">
+                    <input
+                        type="text"
+                        id="GotBack"
+                        class="gotBackInput"
+                        placeholder="Type here"
+                    />
+                    <button onclick="updateGotBack()">Done</button>
+                </div>
+            </div>
         </div>
-        <div class="tableRow">
-          <div class="bsl bslLeft">Left:</div>
-          <div id="left" class="bsl bslRight">$</div>
-        </div>
-      </div>
-    </div>
-    <div class="inputsContainer">
-      <div class="spentContainer">
-        <label for="Spent">Spent:</label>
-        <div style="display: flex; flex-direction: column">
-          <input
-            type="text"
-            id="Spent"
-            class="spentInput"
-            placeholder="Type here"
-          />
-          <button onclick="updateSpent()">Done</button>
-        </div>
-      </div>
-      <div class="gotBackContainer">
-        <label for="GotBack">Got Back:</label>
-        <div style="display: flex; flex-direction: column">
-          <input
-            type="text"
-            id="GotBack"
-            class="gotBackInput"
-            placeholder="Type here"
-          />
-          <button onclick="updateGotBack()">Done</button>
-        </div>
-      </div>
-    </div>
-    <footer id="footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="individualLog.js"></script>
-  </body>
+        <footer id="footer"></footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="individualLog.js"></script>
+    </body>
 </html>

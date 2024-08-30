@@ -18,7 +18,7 @@ mongoose
         });
     })
     .catch((err) => {
-        console.log(err.message);
+        console.log(err);
     });
 
 app.use(express.json());
@@ -48,9 +48,9 @@ app.post(`/addlog`, async (req, res) => {
             message: "Spending log created",
         });
     } catch (err) {
-        return res.status(400).json({
+        return res.status(500).json({
             status: "error",
-            message: err.message,
+            message: "There was an error in creating the spending log",
         });
     }
 });
@@ -85,10 +85,11 @@ app
                 income: log.income,
                 duration_date: log.duration_date,
                 spent: log.spent,
-                left: log.budget - log.spent,
+                left: log.left,
             });
         } catch (err) {
-            return res.status(400).json({
+            console.log(err.reason)
+            return res.status(500).json({
                 status: "error",
                 message: err.message,
             });
@@ -97,8 +98,13 @@ app
     .put(async (req, res) => {
         const { id } = req.params;
         try {
-            const log = await SpendingLog.findByIdAndUpdate(id, req.body);
-            if (!log) {
+            const { spent, left } = req.body
+            const updatedLog = await SpendingLog.findByIdAndUpdate(
+                id,
+                { $set: { spent, left } },
+                { new: true, runValidators: true }
+            )
+            if (!updatedLog) {
                 return res.status(404).json({
                     status: "error",
                     message: `Spending log not found`,
@@ -107,12 +113,12 @@ app
             return res.status(200).json({
                 status: "ok",
                 message: "Spending log updated",
-                _id: log._id,
-                budget: log.budget,
-                income: log.income,
-                duration_date: log.duration_date,
-                spent: log.spent,
-                left: log.left,
+                _id: updatedLog._id,
+                budget: updatedLog.budget,
+                income: updatedLog.income,
+                duration_date: updatedLog.duration_date,
+                spent: updatedLog.spent,
+                left: updatedLog.left,
             });
         } catch (err) {
             return res.status(400).json({
@@ -121,7 +127,7 @@ app
             });
         }
     })
-    .delete(async (req, res) => {
+    .delete (async (req, res) => {
         const { id } = req.params;
         try {
             const log = await SpendingLog.findByIdAndDelete(id);
