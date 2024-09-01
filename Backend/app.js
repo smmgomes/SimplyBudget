@@ -88,7 +88,7 @@ app
                 left: log.left,
             });
         } catch (err) {
-            console.log(err.reason)
+            console.log(err.reason);
             return res.status(500).json({
                 status: "error",
                 message: err.message,
@@ -98,12 +98,12 @@ app
     .put(async (req, res) => {
         const { id } = req.params;
         try {
-            const { spent, left } = req.body
+            const { spent, left } = req.body;
             const updatedLog = await SpendingLog.findByIdAndUpdate(
                 id,
                 { $set: { spent, left } },
-                { new: true, runValidators: true }
-            )
+                { new: true, runValidators: true },
+            );
             if (!updatedLog) {
                 return res.status(404).json({
                     status: "error",
@@ -127,7 +127,7 @@ app
             });
         }
     })
-    .delete (async (req, res) => {
+    .delete(async (req, res) => {
         const { id } = req.params;
         try {
             const log = await SpendingLog.findByIdAndDelete(id);
